@@ -24,3 +24,15 @@ spring:
         web-allow-others: true
 
 
+# Register with Eureka configuration has been moved to config repo : https://github.com/Subha350733/Config-Repo/blob/main/application.yaml
+
+#eureka:
+#  instance:
+#    hostname: localhost
+#    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${instanceId:${random.value}}
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}

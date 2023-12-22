@@ -1,0 +1,10 @@
+version: '3'
+services:
+  product-service:
+    image: 'park05218/product-service:0.0.1'
+    container_name: product-service
+    ports:
+      - '8080:8080'
+    environment:
+      - EUREKA_SERVER_ADDRESS=http://host.docker.internal:8761/eureka
+      - CONFIG_SERVER_URL=host.docker.internal

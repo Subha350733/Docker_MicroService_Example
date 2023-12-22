@@ -1,0 +1,26 @@
+# Set Server Port to 0 to enable dynamic port for each instance
+server:
+  port: 8081
+
+# Register with Eureka configuration has been moved to config repo : https://github.com/Subha350733/Config-Repo/blob/main/application.yaml
+
+spring:
+  application:
+    name: ORDER-SERVICE
+  config:
+    import: optional:configserver:http://${CONFIG_SERVER_URL:localhost}:8888
+  datasource:
+    url: jdbc:h2:file:~/data/order_db
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+
+

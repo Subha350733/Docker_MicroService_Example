@@ -1,0 +1,9 @@
+version: '3'
+services:
+  config-server:
+    image: 'park05218/config-server:0.0.1'
+    container_name: config-server
+    ports:
+      - '8888:8888'
+    environment:
+      - EUREKA_SERVER_ADDRESS=http://host.docker.internal:8761/eureka

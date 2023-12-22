@@ -1,0 +1,7 @@
+version: '3'
+services:
+  service-registry:
+    image: 'park05218/service-registry:0.0.1'
+    container_name: service-registry
+    ports:
+      - '8761:8761'

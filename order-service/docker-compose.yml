@@ -1,0 +1,10 @@
+version: '3'
+services:
+  order-service:
+    image: 'park05218/order-service:0.0.1'
+    container_name: order-service
+    ports:
+      - '8081:8081'
+    environment:
+      - EUREKA_SERVER_ADDRESS=http://host.docker.internal:8761/eureka
+      - CONFIG_SERVER_URL=host.docker.internal
